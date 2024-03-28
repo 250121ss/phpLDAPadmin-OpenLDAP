@@ -24,7 +24,7 @@ Find the line that begins with $servers->setValue('server','base', and set the v
 
 ===
 $servers->setValue('server','base',array('dc=example,dc=com'));
-
+$config->custom->appearance['hide_template_warning'] = true;
 ===
 
 ===  Restart Apache Web Server:  ===

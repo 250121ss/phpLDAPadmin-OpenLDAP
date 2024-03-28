@@ -45,6 +45,9 @@ sudo scp -i /home/ubuntu/keypath/"keyname" ubuntu@178.08.09803:/home/ubuntu/file
 
 == issue ===
 
+sudo ufw allow "OpenLDAP LDAP"
+
+
 == phpmyadmin upload size incress conf ===
 
 sudo vi /etc/php/8.1/apache2/php.ini

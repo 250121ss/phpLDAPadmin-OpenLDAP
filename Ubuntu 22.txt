@@ -1,0 +1,35 @@
+sudo apt update
+
+
+=== Install OpenLDAP ===
+
+sudo apt install slapd ldap-utils
+
+===    Configure OpenLDAP ===
+
+sudo dpkg-reconfigure slapd
+
+=== Install phpLDAPadmin: ===
+
+sudo apt install phpldapadmin
+
+===  Configure phpLDAPadmin:  ===
+
+sudo vi /etc/phpldapadmin/config.php
+
+
+Find the line that begins with $servers->setValue('server','host', and set the value to 'localhost'.
+
+Find the line that begins with $servers->setValue('server','base', and set the value to your LDAP base DN. For example:
+
+===
+$servers->setValue('server','base',array('dc=example,dc=com'));
+
+===
+
+===  Restart Apache Web Server:  ===
+
+sudo systemctl restart apache2
+
+
+http://ip/phpldapadmin
